@@ -1,14 +1,20 @@
 package com.example.security.entity;
 
-import lombok.*;
-
 import java.time.LocalDate;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
 @Getter
 @Setter
 @ToString
-@AllArgsConstructor
 @NoArgsConstructor
-
+@AllArgsConstructor
+@Builder
 public class Member {
     private int mid;
     private String name;
