@@ -1,21 +1,23 @@
 package com.example.security.Service;
 
-import com.example.security.dao.SecurityUserDao;
-import com.example.security.entity.SecurityUser;
-import lombok.RequiredArgsConstructor;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.example.security.dao.SecurityUserDao;
+import com.example.security.entity.SecurityUser;
+
+import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
-public class SecurityUserServiceImpl implements SecurityUserService{
- //   private SecurityUserDao securityUserDao;
- //   @Autowired
- //   public SecurityUserServiceImpl(SecurityUserDao securityUserDao) {
- //      this.securityUserDao = securityUserDao;
- //  }
+public class SecurityUserServiceImpl implements SecurityUserService {
+    //	private SecurityUserDao securityDao;
+//	@Autowired
+//	public SecurityUserServiceImpl(SecurityUserDao securityDao) {
+//		this.securityDao = securityDao;
+//	}
     private final SecurityUserDao securityDao;
 
     @Override
@@ -41,12 +43,13 @@ public class SecurityUserServiceImpl implements SecurityUserService{
     }
 
     @Override
-    public void updateUser(SecurityUser securityUser) {
+    public void updateSecurityUser(SecurityUser securityUser) {
         securityDao.updateSecurityUser(securityUser);
     }
 
     @Override
-    public void deleteUser(String uid) {
+    public void deleteSecurityUser(String uid) {
         securityDao.deleteSecurityUser(uid);
     }
+
 }

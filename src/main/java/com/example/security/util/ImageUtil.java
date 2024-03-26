@@ -1,7 +1,7 @@
 package com.example.security.util;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -10,7 +10,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 
-@Service
+@Component
 public class ImageUtil {
 	@Value("${spring.servlet.multipart.location}") private String uploadDir;
 	

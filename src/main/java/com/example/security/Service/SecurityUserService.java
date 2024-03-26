@@ -1,8 +1,8 @@
 package com.example.security.Service;
 
-import com.example.security.entity.SecurityUser;
-
 import java.util.List;
+
+import com.example.security.entity.SecurityUser;
 
 public interface SecurityUserService {
     public static final int COUNT_PER_PAGE = 10;
@@ -15,9 +15,8 @@ public interface SecurityUserService {
 
     void insertSecurityUser(SecurityUser securityUser);
 
-    void updateUser(SecurityUser securityUser);
+    void updateSecurityUser(SecurityUser securityUser);
 
-  //  void registerUser(SecurityUser securityUser);
+    void deleteSecurityUser(String uid);
 
-    void deleteUser(String uid);
 }
